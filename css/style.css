@@ -1,0 +1,130 @@
+*,*:after,*:before{
+    margin: 0;
+    padding: 0;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+body{
+    background: #0a3868;
+}
+.container{
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    padding: 50px 30px;
+}
+.container * {
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    outline: none;
+}
+.container .input-wrapper {
+    background: #000;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+input, button{
+    height: 50px;
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+    border-radius: .4rem;
+}
+
+input{
+    width: 60%;
+    padding:0 20px;
+    font-size: 14px;
+}
+.calculate{
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 30%;
+}
+.calculate:focus{
+    background: #f00;
+    color: #fff;
+}
+.output-wrapper > div{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.output-wrapper > div > div {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: .5rem;
+    text-transform: capitalize;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.output-wrapper > div > div > span, p{
+    font-size: 18px;
+}
+.output-wrapper > div > div > span{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.result{
+    margin: 10px 0;
+    background: #000016;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 19px;
+}
+@media screen and (max-width:768px) {
+    html,body{
+        overflow-x: hidden;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        padding: 0;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .container .input-wrapper{
+        width: 62%;
+        margin-left: 19%;
+        display: flex;
+        flex-direction: column;       
+    }
+    .output-wrapper > div {
+        flex-direction: column;
+    }
+    .output-wrapper > div > div {
+        width: 60%;
+        margin: 10px auto;
+    }
+    .container .input-wrapper input, .calculate{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .result{
+        width: 300px;
+        margin: auto;
+    }
+}
